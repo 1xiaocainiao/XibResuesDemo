@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18122"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Y2B-tu-Tfx" customClass="ContainerView" customModule="XibResuesDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6NJ-le-uUi" customClass="BaseContainerView" customModule="XibResuesDemo" customModuleProvider="target">
+                    <rect key="frame" x="20" y="20" width="374" height="160"/>
+                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="6NJ-le-uUi" secondAttribute="trailing" constant="20" id="5k2-Rq-8Ul"/>
+                <constraint firstItem="6NJ-le-uUi" firstAttribute="top" secondItem="Y2B-tu-Tfx" secondAttribute="top" constant="20" id="MPo-GL-FSq"/>
+                <constraint firstItem="6NJ-le-uUi" firstAttribute="leading" secondItem="Y2B-tu-Tfx" secondAttribute="leading" constant="20" id="RGJ-BN-S7J"/>
+                <constraint firstAttribute="bottom" secondItem="6NJ-le-uUi" secondAttribute="bottom" priority="800" constant="20" id="vEa-Ij-Vrj"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="contentView" destination="6NJ-le-uUi" id="b44-oh-gr1"/>
+            </connections>
+            <point key="canvasLocation" x="194" y="45"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
