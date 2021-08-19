@@ -26,6 +26,10 @@ class ImageContainerCell: BaseCell {
         logoImageView.contentMode = .scaleAspectFill
         logoImageView.clipsToBounds = true
         logoImageView.isHidden = true
+        logoImageView.isUserInteractionEnabled = true
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
+        logoImageView.addGestureRecognizer(tap)
         
         meiziLogoImageView = UIImageView(image: UIImage(named: "Image-1"))
         self.subContentView.contentView.addSubview(meiziLogoImageView)
@@ -38,6 +42,10 @@ class ImageContainerCell: BaseCell {
 //            make.top.left.bottom.equalTo(self.subContentView.contentView)
 //            make.size.equalTo(CGSize(width: 100, height: 200))
 //        }
+    }
+    
+    @objc func didTap(_ gesture: UITapGestureRecognizer) {
+        print("tap")
     }
     
     override func layoutSubviews() {
@@ -55,6 +63,7 @@ class ImageContainerCell: BaseCell {
         if showMeizi {
             meiziLogoImageView.isHidden = false
             
+            // 注意这里必须要设置对应的frame和contentSize,否则要么不正常显示，要么frame不对会导致不想赢点击事件
             meiziLogoImageView.frame = CGRect(x: 0, y: 0, width: 160, height: 300)
             
             self.subContentView.contentView.contentSize = CGSize(width: UIView.noIntrinsicMetric, height: 300)
